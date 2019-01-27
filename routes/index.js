@@ -3,8 +3,9 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res) {
-	//res.render('index', { title: 'Express i have mine' });
-	res.send('hello');
+	var url = req.query.url;
+	var outString = url + "here is the url";
+  	res.render('index', { title: outString });
 });
 
 module.exports = router;
